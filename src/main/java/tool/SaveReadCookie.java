@@ -22,7 +22,7 @@ import java.util.StringTokenizer;
  * */
 public class SaveReadCookie {
 
-    public void saveCookies(WebDriver driver, String url, String filepath) throws IOException {
+    public void saveCookies(String url, String filepath) throws IOException {
         /*
             浏览器复用技术：
          * cmd执行： chrome -remote-debugging-port=9222
@@ -30,7 +30,7 @@ public class SaveReadCookie {
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("debuggerAddress", "127.0.0.1:9222");
         //利用chromedriver控制chrome
-        driver = new ChromeDriver(options);  // 把配置加载到chromedriver实现复用浏览器
+        WebDriver driver = new ChromeDriver(options);  // 把配置加载到chromedriver实现复用浏览器
 
         driver.get(url);
         Set<Cookie> cookies = driver.manage().getCookies();
