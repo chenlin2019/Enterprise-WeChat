@@ -117,9 +117,9 @@ public class ContactPage extends BasePage {
         return this;
     }
 
+
     public String gettagname() {
-        /*
-        * */
+
         return mygetText(this.gettagname);
     }
 }
