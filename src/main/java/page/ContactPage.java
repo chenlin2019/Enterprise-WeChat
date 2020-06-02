@@ -118,6 +118,8 @@ public class ContactPage extends BasePage {
     }
 
     public String gettagname() {
+        /*
+        * */
         return mygetText(this.gettagname);
     }
 }
