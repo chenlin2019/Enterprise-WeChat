@@ -1,9 +1,6 @@
-package page;
+package test_web.page;
 
-import org.checkerframework.checker.units.qual.A;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -23,12 +20,12 @@ public class BasePage {
         // 隐式等待
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize(); // 最大化浏览器
-        wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait=new WebDriverWait(driver, 10);
     }
 
     public BasePage(RemoteWebDriver driver) {
         this.driver = driver;
-        wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait=new WebDriverWait(driver, 10);
     }
 
 
@@ -45,7 +42,7 @@ public class BasePage {
     }
 
     public void  click(By by){
-        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        wait.until(ExpectedConditions.presenceOfElementLocated(by)); // 等待元素存在
         driver.findElement(by).click();
 
     }
@@ -53,7 +50,7 @@ public class BasePage {
 
 
     public void sendKey(By by,String content){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));//等待元素可见
         driver.findElement(by).clear();
         driver.findElement(by).sendKeys(content);
 

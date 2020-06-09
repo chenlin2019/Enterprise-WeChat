@@ -1,11 +1,10 @@
-package tool;
+package test_web.tool;
 
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

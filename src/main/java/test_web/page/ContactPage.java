@@ -1,4 +1,4 @@
-package page;
+package test_web.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;

@@ -1,4 +1,4 @@
-package page;
+package test_web.page;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 
