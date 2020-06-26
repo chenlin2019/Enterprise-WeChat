@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TaskPage extends BasePage{
+public class TaskPage extends AppBasePage {
     //  添加日程
     private final By addButton = By.id("gym");
     private final By taskName = By.id("b2k");

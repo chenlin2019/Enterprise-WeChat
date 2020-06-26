@@ -6,7 +6,7 @@ import java.io.IOException;
 * 主页面
 *
 * */
-public class MainPage extends BasePage{
+public class MainPage extends WebBasePage {
 
     String url = "https://work.weixin.qq.com/wework_admin/frame";
 
@@ -16,7 +16,8 @@ public class MainPage extends BasePage{
         try {
             driver.get(url);
             driver.manage().deleteAllCookies();
-            savereadcookie.loadCookies(driver,"src/test/java/webauto/data/cookies.txt");
+            String cookiesPath ="src\\main\\resources\\test_framework_data\\cookies.txt".toString();
+            savereadcookie.loadCookies(driver,cookiesPath);
             driver.get(url);
         } catch (IOException e) {
             e.printStackTrace();

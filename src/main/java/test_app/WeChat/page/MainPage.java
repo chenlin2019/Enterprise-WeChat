@@ -1,6 +1,6 @@
 package test_app.WeChat.page;
 import org.openqa.selenium.By;
-public class MainPage extends BasePage{
+public class MainPage extends AppBasePage {
 
 
     public MainPage() {

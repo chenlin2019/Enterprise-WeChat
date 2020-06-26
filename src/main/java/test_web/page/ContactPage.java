@@ -3,7 +3,7 @@ package test_web.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class ContactPage extends BasePage {
+public class ContactPage extends WebBasePage {
     /****************添加成员元素组***********************/
     private By addMember = By.linkText("添加成员");
     private By username = By.name("username");

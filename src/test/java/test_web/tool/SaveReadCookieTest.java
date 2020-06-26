@@ -14,7 +14,7 @@ class SaveReadCookieTest {
     @Test
     void saveCookies() throws Exception{
         String url = "https://work.weixin.qq.com/wework_admin/frame";
-        String filepath = "src/test/java/webauto/data/cookies.txt";
+        String filepath = SaveReadCookieTest.class.getResourceAsStream("/test_framework_data/cookies.txt").toString();
         SaveReadCookie saveReadCookie= new SaveReadCookie();
         saveReadCookie.saveCookies(url,filepath);
     }

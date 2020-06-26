@@ -11,13 +11,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import test_framework.BasePage;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class BasePage {
+public class AppBasePage extends BasePage {
     // IOSDriver
     // AndroidDriver<MobileElement> driver;
     AppiumDriver<MobileElement> driver;
@@ -28,12 +29,16 @@ public class BasePage {
     private Integer winheight; // 获取高度
     private Integer winwidth;   // 获取宽度
 
-    public BasePage(AppiumDriver<MobileElement> driver) {
+    public AppBasePage() {
+        // todo:暂时占位
+    }
+
+    public AppBasePage(AppiumDriver<MobileElement> driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, timeOutInSecondsDefault);
     }
 
-    public BasePage(String packageName, String activityName) {
+    public AppBasePage(String packageName, String activityName) {
         this.packageName = packageName;
         this.activityName = activityName;
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -72,6 +77,11 @@ public class BasePage {
         }
     }
 
+    /**
+     * 根据单条件滚动查找
+     * @param content
+     * @param type
+     */
     public void scroll(String content, String type) {
         AndroidDriver<MobileElement> driver = (AndroidDriver<MobileElement>) this.driver;
         String uiautomatorStr = null;
@@ -92,6 +102,13 @@ public class BasePage {
         }
     }
 
+    /**
+     * 根据className多条件滚动查找
+     * @param content
+     * @param className
+     * @param type
+     * @param index
+     */
     public void scroll(String content, String className, String type, int index) {
         AndroidDriver<MobileElement> driver = (AndroidDriver<MobileElement>) this.driver;
         String uiautomatorStr = null;
@@ -109,7 +126,10 @@ public class BasePage {
         }
     }
 
-
+    /**
+     * 指定方向翻页
+     * @param direction
+     */
     public void swipe(String direction) {
         this.winheight = driver.manage().window().getSize().getHeight();
         this.winwidth = driver.manage().window().getSize().getWidth();

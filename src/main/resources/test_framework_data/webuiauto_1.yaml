@@ -1,0 +1,7 @@
+name: xxx
+description: xxx
+steps:
+  - page: main
+    action: init
+
+

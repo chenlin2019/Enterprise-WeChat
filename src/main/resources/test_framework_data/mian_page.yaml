@@ -1,0 +1,6 @@
+name: main
+methods:
+  init:
+    - action: get
+      url: https://work.weixin.qq.com/wework_admin/frame
+      cookiesFile: src\\main\\resources\\test_framework_data\\cookies.txt

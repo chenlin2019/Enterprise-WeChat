@@ -57,6 +57,7 @@ public class SaveReadCookie {
 
     public void loadCookies(WebDriver driver, String filepath) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(filepath));
+
         try {
             String line;
             while ((line = br.readLine()) != null) {
@@ -74,7 +75,6 @@ public class SaveReadCookie {
                 }
                 boolean isSecure = Boolean.parseBoolean(st.nextToken());
                 Cookie cookie = new Cookie(name, value, domain, path, expiry, isSecure);
-//                System.out.println(cookie);
                 driver.manage().addCookie(cookie);
             }
         } catch (IOException | ParseException e) {

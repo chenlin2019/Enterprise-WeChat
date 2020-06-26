@@ -4,11 +4,10 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 
-import java.io.BufferedReader;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class WaitDealPage extends BasePage {
+public class WaitDealPage extends AppBasePage {
 
     private final By addbutton = By.id("gym");
     private final By dealcontent = By.id("b2k");

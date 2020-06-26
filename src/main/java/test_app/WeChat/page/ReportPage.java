@@ -4,11 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 
-import javax.swing.*;
-import java.util.List;
-import java.util.stream.Collectors;
-
-public class ReportPage extends BasePage {
+public class ReportPage extends AppBasePage {
     private final By dayreport = By.xpath("//*[@text='日报']");
     private final By todayworke = By.xpath("//*[@class='android.widget.EditText' and @index=1]");
     private final By tomorroworke = By.xpath("//*[@class='android.widget.EditText'and @index=3]");
