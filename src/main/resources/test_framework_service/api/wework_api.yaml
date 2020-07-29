@@ -1,0 +1,12 @@
+#ApiObjectModel
+#此文件相当于接口文档
+name: wework
+methods:
+  #ApiObjectMethodModel
+  get_token:  # action
+    method: get
+    url: https://qyapi.weixin.qq.com/cgi-bin/gettoken
+    query:
+      corpid: ID
+      corpsecret: SECRET
+    save: access_token

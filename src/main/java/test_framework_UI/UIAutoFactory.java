@@ -1,4 +1,4 @@
-package test_framework;
+package test_framework_UI;
 
 import test_app.WeChat.page.AppBasePage;
 import test_web.page.WebBasePage;

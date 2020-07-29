@@ -1,4 +1,4 @@
-package test_framework;
+package test_framework_UI;
 
 import java.util.HashMap;
 import java.util.List;

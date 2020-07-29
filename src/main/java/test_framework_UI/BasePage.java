@@ -1,4 +1,4 @@
-package test_framework;
+package test_framework_UI;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
